@@ -6,6 +6,7 @@ var ApplicationStore = require('../stores/ApplicationStore');
 var connectToStores = require("fluxible-addons-react").connectToStores;
 var provideContext = require('fluxible-addons-react').provideContext;
 var handleHistory = require('fluxible-router').handleHistory;
+var NavBar = require('./NavBar');
 
 var Application = React.createClass({
     render: function() {
@@ -13,7 +14,8 @@ var Application = React.createClass({
 
         return (
             <div>
-                <Nav selected={this.props.currentPageName} links={this.props.pages} />
+                <h1>Welcome to The Next Facebook!</h1>
+                <NavBar />
                 <Handler />
             </div>
         );
